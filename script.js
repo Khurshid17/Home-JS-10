@@ -208,6 +208,7 @@ let viewClose = document.querySelector('.view__close');
 info.forEach(element =>{
     element.addEventListener("dblclick", function () {
         view.classList.add("active")
+        view.setAttribute("src", "")
     })
     
 })
