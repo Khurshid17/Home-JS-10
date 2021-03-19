@@ -203,12 +203,15 @@ receiptWindowBtn.addEventListener("click", function () {
 })
 
 let info = document.querySelectorAll('.main__product-info');
+let infoImg = document.querySelector('.main__product-info img');
 let view = document.querySelector('.view');
 let viewClose = document.querySelector('.view__close');
 info.forEach(element =>{
     element.addEventListener("dblclick", function () {
         view.classList.add("active")
-        view.setAttribute("src", "")
+        infoImg.setAttribute("src", "images/product2.jpg")
+        infoImg.setAttribute("src", "images/product1.jpg")
+        infoImg.setAttribute("src", "images/product3.jpg")
     })
     
 })
