@@ -202,18 +202,20 @@ receiptWindowBtn.addEventListener("click", function () {
     window.location.reload();
 })
 
-let info = document.querySelectorAll('.main__product-info');
-let infoImg = document.querySelector('.main__product-info img');
-let view = document.querySelector('.view');
-let viewClose = document.querySelector('.view__close');
-let elem = document.querySelector('[src]');
-info.forEach(element =>{
-    element.addEventListener("dblclick", function () {
+let view = document.querySelector('.view'),
+    mainProductInfo = document.querySelectorAll('.main__product-info'),
+    viewClose = document.querySelector('.view__close')
+
+for (let i = 0; i < mainProductInfo.length; i++) {
+    mainProductInfo[i].addEventListener('dblclick', function () {
+        let pathImg = this.querySelector('img').getAttribute("src")
+        console.log(pathImg);
         view.classList.add("active")
-        elem.getAttribute('src')
+        view.querySelector('img').setAttribute("src", pathImg)
     })
-})
-viewClose.addEventListener("click", function () {
+}
+
+viewClose.addEventListener('click', function () {
     view.classList.remove("active")
 })
 
