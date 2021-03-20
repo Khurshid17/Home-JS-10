@@ -206,14 +206,12 @@ let info = document.querySelectorAll('.main__product-info');
 let infoImg = document.querySelector('.main__product-info img');
 let view = document.querySelector('.view');
 let viewClose = document.querySelector('.view__close');
+let elem = document.querySelector('[src]');
 info.forEach(element =>{
     element.addEventListener("dblclick", function () {
         view.classList.add("active")
-        infoImg.setAttribute("src", "images/product2.jpg")
-        infoImg.setAttribute("src", "images/product1.jpg")
-        infoImg.setAttribute("src", "images/product3.jpg")
+        elem.getAttribute('src')
     })
-    
 })
 viewClose.addEventListener("click", function () {
     view.classList.remove("active")
